@@ -9,14 +9,15 @@ qf = 1 # qualidade do stream de alimentação
 Vs=3.206 # fluxo molar de vapor na parte superior
 Vr= Vs + F*(1-qf) # fluxo molar de vapor na retificação
 
-B=0.5 # fluxo molar de material no fundo
-D=0.5 # fluxo molar na destilação
-
 R=2.706 # fluxo molar no refluxo
 a = 1.5 # constante de equilibrio
 
 Ls=R+F*qf # fluxo molar de líquido na seção inferior
-#Lr=2.706*1.01 # fluxo molar de líquido na seção superior
+Lr=R # fluxo molar de líquido na seção superior
+
+B=Ls-Vs # fluxo molar de material no fundo
+D=0.5 # fluxo molar na destilação
+
 
 Mb=5 # retenção molar no fundo
 Md=5 # retenção molar no receptor
